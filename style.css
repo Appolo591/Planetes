@@ -4,6 +4,13 @@
 
 }
 
+header{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .menu-container{
     background-color: #1B2430;
 }
@@ -13,7 +20,7 @@
 /*header .menu-container div ???*/
  nav {
     max-width: 1200px;
-    
+    color: #D9D9D9;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -49,8 +56,9 @@ header .menu-container img{
     height: 50px;
 }
 
-header img{
-    max-width: 100%;
+main{
+    margin: 40px;
+    
 }
 
 main div img{
@@ -67,14 +75,21 @@ main div {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    
    
 }
-main div:nth-of-type(2n){
+main .droite{
+    
     flex-direction: row-reverse;
+}
+
+main article{
+    margin: 15px;
 }
 
 main article div {
     display: flex;
+    margin
     
 
 }
@@ -90,14 +105,14 @@ article div p{
 }
 
  article div .brown{
-    background-color: rgb(156, 88, 63);
-    color: black;
+    background-color: #D6D5A8;
+    color: #1B2430;
 
 
 
 }
 article div p:last-of-type{
-    background-color: rgb(14, 13, 12);
+    background-color: #1B2430;
     color: white;
     margin-left: 20px;
 }
@@ -117,13 +132,18 @@ hr{
 #middle-line{
     display: flex ;
     max-width: 1200px;
+    justify-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    
    
 
 }
 
 main #middle-line div {
 
-    border-bottom: solid black 1px;
+    border-bottom: solid black 3px;
     width: 100%;
 }
 
