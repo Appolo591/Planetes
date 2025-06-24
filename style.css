@@ -25,7 +25,7 @@ header{
     position: fixed;
     top: 0 ;
     width: 100%;
-    
+    position: relative;
 }
 
 #photo-terre{
@@ -75,7 +75,7 @@ header .menu-container img{
 
 main{
     margin: 2.56rem;
-    
+    padding-top: 4.5rem;
 }
 
 main div img{
@@ -245,6 +245,39 @@ footer section:nth-of-type(2){
         flex-direction: column !important;
         align-items: flex-start;
     }
+    main > div {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    main > div:nth-child(even) {
+        align-items: flex-end !important;
+        text-align: right;
+    }
+    main > div:nth-child(even) article,
+    main > div:nth-child(even) article > *,
+    main > div:nth-child(even) article div,
+    main > div:nth-child(even) article div > *,
+    main > div:nth-child(even) img {
+        align-self: flex-end !important;
+        text-align: right !important;
+    }
+    main > div:nth-child(odd) {
+        align-items: flex-start !important;
+        text-align: left;
+    }
+    main > div:nth-child(odd) article,
+    main > div:nth-child(odd) article > *,
+    main > div:nth-child(odd) article div,
+    main > div:nth-child(odd) article div > *,
+    main > div:nth-child(odd) img {
+        align-self: flex-start !important;
+        text-align: left !important;
+    }
+    main > div img {
+        align-self: center;
+    }
     main div img {
         padding: 1.5rem;
         width: 100%;
@@ -266,6 +299,34 @@ footer section:nth-of-type(2){
     header nav a {
         padding: 1rem 0.5rem;
     }
+    #burger-menu {
+        display: flex !important;
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+    }
+    #main-nav {
+        display: none;
+        flex-direction: column;
+        background: #1B2430;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        width: 100vw;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s;
+        z-index: 1000;
+    }
+    #main-nav.open {
+        display: flex;
+    }
+    header nav ul {
+        width: 100%;
+    }
+    header nav a {
+        padding: 1.2rem 1rem;
+        border-bottom: 1px solid #333;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -279,13 +340,6 @@ footer section:nth-of-type(2){
         flex-direction: column;
         align-items: flex-start;
         padding-left: 0.5rem;
-    }
-    header nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-    header nav a {
-        padding: 1rem 0.5rem;
     }
     #photo-terre {
         width: 100vw;
@@ -373,7 +427,7 @@ footer section:nth-of-type(2){
 }
 
 #burger-menu {
-    background: none;
+    background: #333;
     border: none;
     cursor: pointer;
     padding: 1rem;
