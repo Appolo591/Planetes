@@ -14,22 +14,24 @@
 
         <!-- Ce qui contient la navbar et le logo -->
         <div class="menu-container">
-            
-                
-                <nav>
+            <button id="burger-menu" aria-label="Ouvrir le menu de navigation" style="display:none;">
+                <span style="display:block;width:25px;height:3px;background:#fff;margin:5px 0;"></span>
+                <span style="display:block;width:25px;height:3px;background:#fff;margin:5px 0;"></span>
+                <span style="display:block;width:25px;height:3px;background:#fff;margin:5px 0;"></span>
+            </button>
+            <nav id="main-nav">
                 <img src="src/Vector.png" id="icone" alt="photo icône planète saturne">
-                    <ul>
-                        <li><a href="#mercure">Mercure</a></li>
-                        <li><a href="#venus">Vénus</a></li>
-                        <li><a href="#earth">La Terre</a></li>
-                        <li><a href="#mars">Mars</a></li>
-                        <li><a href="#jupiter">Jupiter</a></li>
-                        <li><a href="#saturne">Saturne</a></li>
-                        <li><a href="#uranus">Uranus</a></li>
-                        <li><a href="#neptune">Neptune</a></li>
-                    </ul>
-                </nav>
-            
+                <ul>
+                    <li><a href="#mercure">Mercure</a></li>
+                    <li><a href="#venus">Vénus</a></li>
+                    <li><a href="#earth">La Terre</a></li>
+                    <li><a href="#mars">Mars</a></li>
+                    <li><a href="#jupiter">Jupiter</a></li>
+                    <li><a href="#saturne">Saturne</a></li>
+                    <li><a href="#uranus">Uranus</a></li>
+                    <li><a href="#neptune">Neptune</a></li>
+                </ul>
+            </nav>
         </div>
 
         <!-- Image de fond -->
@@ -203,5 +205,12 @@
         <p> &#xa9 PETIT Louis | M. VIGREUX Joel 6 M. MOY Yohann</p>
     </footer>
 
+    <script>
+        const burger = document.getElementById('burger-menu');
+        const nav = document.getElementById('main-nav');
+        burger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
