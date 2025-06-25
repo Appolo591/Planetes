@@ -267,6 +267,8 @@ footer section:nth-of-type(2){
         align-items: flex-start !important;
         text-align: left;
     }
+    
+    /* Sélectionne toutes les divs impaires (1ère, 3ème, 5ème, etc.) qui sont enfants directs de la balise <main>. */
     main > div:nth-child(odd) article,
     main > div:nth-child(odd) article > *,
     main > div:nth-child(odd) article div,
